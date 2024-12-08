@@ -43,6 +43,7 @@
       "space m p": "editor::Format",
       "space q": "pane::CloseActiveItem",
       "space c a": "editor::ToggleCodeActions",
+      "space r n": "editor::Rename",
       "space c c": "assistant::ToggleFocus",
       "space x d": "editor::GoToDiagnostic",
       "space x a": "diagnostics::Deploy",
