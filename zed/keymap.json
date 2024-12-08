@@ -1,0 +1,104 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "ctrl-f": "file_finder::Toggle",
+      "cmd-shift-r": "projects::OpenRecent",
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-p": "command_palette::Toggle",
+      "ctrl-t": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-h": "workspace::ToggleLeftDock",
+      "ctrl-l": "workspace::ToggleRightDock",
+      "ctrl-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "workspace::ToggleLeftDock",
+      "ctrl-l": "workspace::ToggleRightDock",
+      "ctrl-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space e f": "project_panel::ToggleFocus",
+      // "space e e": "workspace::ToggleLeftDock",
+      "space e e": "pane::RevealInProjectPanel",
+      "space f f": "file_finder::Toggle",
+      "space f s": "pane::DeploySearch",
+      "space m p": "editor::Format",
+      "space q": "pane::CloseActiveItem",
+      "space c a": "editor::ToggleCodeActions",
+      "space c c": "assistant::ToggleFocus",
+      "space x d": "editor::GoToDiagnostic",
+      "space x a": "diagnostics::Deploy",
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+      "space r c": ["task::Spawn", { "task_name": "run file" }],
+      "space i": "tab_switcher::Toggle",
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "space c c": "assistant::ToggleFocus"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space e e": "workspace::ToggleLeftDock",
+      "space e f": "project_panel::ToggleFocus",
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-k": "editor::ContextMenuPrev",
+      "ctrl-j": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "k": "menu::SelectPrev",
+      "j": "menu::SelectNext",
+      "l": "menu::Confirm",
+      "x": "tab_switcher::CloseSelectedItem",
+      "cmd-shift-i": "menu::SelectPrev",
+      "cmd-backspace": "tab_switcher::CloseSelectedItem"
+    }
+  },
+  {
+    "context": "ProposedChangesEditor",
+    "bindings": {
+      "ctrl-y": "editor::ApplyDiffHunk",
+      "ctrl-shift-y": "editor::ApplyAllDiffHunks"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-shift-tab": "pane::ActivatePrevItem",
+      "ctrl-tab": "pane::ActivateNextItem"
+    }
+  }
+]
