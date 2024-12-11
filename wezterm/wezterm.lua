@@ -15,7 +15,7 @@ config.window_padding = {
   left = 4,
   right = 10,
   top = 10,
-  bottom = 4,
+  bottom = 1,
 }
 -- config.window_background_opacity = 0.27
 -- config.macos_window_background_blur = 30
@@ -24,10 +24,10 @@ config.window_padding = {
 
 -- WALLPAPER SHIT STARTS HERE
 
-config.window_background_image_hsb = {
-	brightness = 0.1,
+-- config.window_background_image_hsb = {
+-- 	brightness = 0.00,
   -- brightness = 0.08,
-}
+-- }
 
 -- local wallpaper_folder = "/Users/shivansh/Downloads/nvim/dark"
 -- -- local wallpaper_folder = "/Users/shivansh/Downloads/nvim"
@@ -60,6 +60,8 @@ config.window_background_image_hsb = {
 -- config.window_background_image = "/Users/shivansh/Documents/Wallpapers/Anime:Waifu Wallpapers/darkEyes.jpg"
 -- config.window_background_image = "/Users/shivansh/Documents/Wallpapers/Anime:Waifu Wallpapers/coolGuy.jpg"
 -- config.window_background_image = "/Users/shivansh/Documents/Wallpapers/Anime:Waifu Wallpapers/road.jpg"
+-- config.window_background_image = "/Users/shivansh/Downloads/graffiti.png"
+
 
 -- WALLPAPER SHIT ENDS HERE
 
