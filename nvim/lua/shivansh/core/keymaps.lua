@@ -66,13 +66,12 @@ keymap.set("n", "<leader>rc", function()
 		vim.cmd("vsplit")
 		vim.cmd("terminal node " .. file_name)
 	elseif file_type == "cpp" then
-		vim.cmd("tabnew | terminal g++ " .. file_name .. "; ./a.out")
+		vim.cmd("tabnew | terminal g++ -std=c++17 " .. file_name .. " -o a.out && ./a.out")
 	elseif file_type == "python" then
-    vim.cmd("terminal python3 " .. file_name)
+		vim.cmd("terminal python3 " .. file_name)
 	end
 end, { desc = "Run the code" })
 
 vim.api.nvim_set_keymap("n", "<leader>at", ":CompetiTest add_testcase<CR>", {})
-vim.api.nvim_set_keymap('n', '<leader>ct', "i- [ ] <Esc>a", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>md', "0f[ax<leader><Esc>dt]o", { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap("n", "<leader>ct", "i- [ ] <Esc>a", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>md", "0f[ax<leader><Esc>dt]o", { noremap = true, silent = true })
