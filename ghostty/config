@@ -1,3 +1,11 @@
 theme=kanagawabones
 font-family="IosevkaTerm Nerd Font Mono"
 font-size = 14.5
+macos-non-native-fullscreen = visible-menu
+fullscreen = true
+macos-option-as-alt = true
+macos-icon = custom-style
+macos-icon-frame = beige
+macos-icon-ghost-color = #C8C093
+macos-icon-screen-color = #1F1F28
+
