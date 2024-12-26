@@ -8,7 +8,7 @@ alt-m : open -a "Music"
 alt-r : open -a "Highlights"
 alt-z : open -a "Things3" && open -a "Calendar"
 alt + shift - s : osascript -e 'quit app "Things3"' && osascript -e 'quit app "Calendar"'
-alt-t : open -a "Kitty"
+alt-t : open -a "Ghostty"
 alt-v : open -a "Visual Studio Code"
 alt-w : open -a "Texts"
 alt-s : open -a "Zed Preview"
