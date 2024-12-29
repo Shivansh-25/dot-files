@@ -1,11 +1,14 @@
 theme=kanagawabones
 font-family="IosevkaTerm Nerd Font Mono"
-font-size = 14.5
+font-size = 15
 macos-non-native-fullscreen = visible-menu
+title = "ghostty"
+window-width = 3000
+window-height = 3000
 fullscreen = true
 macos-option-as-alt = true
 macos-icon = custom-style
 macos-icon-frame = beige
 macos-icon-ghost-color = #C8C093
-macos-icon-screen-color = #1F1F28
+macos-icon-screen-color = #54546D
 

@@ -55,8 +55,6 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
 	})
 end, { desc = "toggle diagnostic" })
 
-keymap.set("n", "<space>ee", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
-keymap.set("n", "<space>ef", ":Telescope file_browser<CR>")
 
 keymap.set("n", "<leader>rc", function()
 	local file_name = vim.api.nvim_buf_get_name(0)
