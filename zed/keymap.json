@@ -13,7 +13,8 @@
       "ctrl-j": "menu::SelectNext",
       "ctrl-k": "menu::SelectPrev",
       "ctrl-p": "command_palette::Toggle",
-      "ctrl-t": "workspace::ToggleBottomDock"
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "ctrl-shift-t": "workspace::NewCenterTerminal"
     }
   },
   {

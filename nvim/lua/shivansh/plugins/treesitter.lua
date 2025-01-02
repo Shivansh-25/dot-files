@@ -7,7 +7,7 @@ return {
 	},
 	config = function()
 		-- Configure nvim-treesitter
----@diagnostic disable-next-line: missing-fields
+		---@diagnostic disable-next-line: missing-fields
 		require("nvim-treesitter.configs").setup({
 			highlight = {
 				enable = true,
@@ -20,7 +20,7 @@ return {
 				"tsx",
 				"yaml",
 				"html",
-        "java",
+				"java",
 				"css",
 				"prisma",
 				"markdown",
@@ -45,28 +45,17 @@ return {
 					node_decremental = "<bs>",
 				},
 			},
-			autotag = {
-				enable = true,
-				enable_close = true,
-				enable_rename = true,
-				enable_close_on_slash = true,
-				filetypes = {
-					"html",
-					"javascriptreact",
-					"typescriptreact",
-					"javascript",
-					"typescript",
-					"svelte",
-					"vue",
-          "cpp",
-					"rescript",
-					"xml",
-					"php",
-					"markdown",
-					"astro",
-					"glimmer",
-					"handlebars",
-					"hbs",
+		})
+		require("nvim-ts-autotag").setup({
+			opts = {
+				-- Defaults
+				enable_close = true, -- Auto close tags
+				enable_rename = true, -- Auto rename pairs of tags
+				enable_close_on_slash = true, -- Auto close on trailing </
+			},
+			per_filetype = {
+				["html"] = {
+					enable_close = false,
 				},
 			},
 		})

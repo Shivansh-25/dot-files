@@ -21,7 +21,7 @@ return {
 		auto_insert_mode = false, -- Automatically enter insert mode when opening window and on new prompt
 		insert_at_end = false, -- Move cursor to end of buffer when inserting text
 		clear_chat_on_new_prompt = false, -- Clears chat on every new prompt
-		highlight_selection = true, -- Highlight selection in the source buffer when in the chat window
+		highlight_selection = false, -- Highlight selection in the source buffer when in the chat window
 		highlight_headers = true, -- Highlight headers in chat, disable if using markdown renderers (like render-markdown.nvim)
 
 		vim.api.nvim_set_keymap("n", "<leader>cc", ":CopilotChat<CR>", { noremap = true, silent = true }),
