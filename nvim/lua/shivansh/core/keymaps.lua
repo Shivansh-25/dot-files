@@ -55,7 +55,6 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
 	})
 end, { desc = "toggle diagnostic" })
 
-
 keymap.set("n", "<leader>rc", function()
 	local file_name = vim.api.nvim_buf_get_name(0)
 	local file_type = vim.bo.filetype
