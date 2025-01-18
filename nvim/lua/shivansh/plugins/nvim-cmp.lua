@@ -72,10 +72,10 @@ return {
 
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "luasnip" }, -- snippets
-				{ name = "supermaven" },
+				-- { name = "supermaven" },
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
+				{ name = "luasnip" }, -- snippets
 			}),
 
 			-- configure lspkind for vs-code like pictograms in completion menu
