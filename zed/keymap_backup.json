@@ -11,7 +11,7 @@
       "ctrl-f": "file_finder::Toggle",
       "cmd-shift-r": "projects::OpenRecent",
       "ctrl-j": "menu::SelectNext",
-      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-k": "menu::SelectPrev",
       "ctrl-p": "command_palette::Toggle",
       "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-shift-t": "workspace::NewCenterTerminal"
@@ -34,12 +34,6 @@
     }
   },
   {
-    "context": "MessageEditor > Editor",
-    "bindings": {
-      "ctrl-c": "agent::ToggleFocus"
-    }
-  },
-  {
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "space e f": "project_panel::ToggleFocus",
@@ -51,21 +45,21 @@
       "space q": "pane::CloseActiveItem",
       "space c a": "editor::ToggleCodeActions",
       "space r n": "editor::Rename",
-      "space c c": "agent::ToggleFocus",
+      "space c c": "assistant::ToggleFocus",
       "space x d": "editor::GoToDiagnostic",
       "space x a": "diagnostics::Deploy",
       "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
       "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
       "space r c": ["task::Spawn", { "task_name": "run file" }],
       "space i": "tab_switcher::Toggle",
-      "shift-h": "pane::ActivatePreviousItem",
+      "shift-h": "pane::ActivatePrevItem",
       "shift-l": "pane::ActivateNextItem"
     }
   },
   {
     "context": "Editor && vim_mode == visual",
     "bindings": {
-      "space c c": "agent::ToggleFocus"
+      "space c c": "assistant::ToggleFocus"
     }
   },
   {
@@ -80,18 +74,18 @@
   {
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
-      "ctrl-k": "editor::ContextMenuPrevious",
+      "ctrl-k": "editor::ContextMenuPrev",
       "ctrl-j": "editor::ContextMenuNext"
     }
   },
   {
     "context": "TabSwitcher",
     "bindings": {
-      "k": "menu::SelectPrevious",
+      "k": "menu::SelectPrev",
       "j": "menu::SelectNext",
       "l": "menu::Confirm",
       "x": "tab_switcher::CloseSelectedItem",
-      "cmd-shift-i": "menu::SelectPrevious",
+      "cmd-shift-i": "menu::SelectPrev",
       "cmd-backspace": "tab_switcher::CloseSelectedItem"
     }
   },
@@ -105,7 +99,7 @@
   {
     "context": "Pane",
     "bindings": {
-      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "ctrl-shift-tab": "pane::ActivatePrevItem",
       "ctrl-tab": "pane::ActivateNextItem"
     }
   }
