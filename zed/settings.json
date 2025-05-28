@@ -24,11 +24,11 @@
   "vim_mode": true,
   "relative_line_numbers": true,
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 18,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Kanagawa Dragon"
   },
   "buffer_font_family": "Iosevka Nerd Font",
   "ui_font_family": "Zed Plex Mono",
