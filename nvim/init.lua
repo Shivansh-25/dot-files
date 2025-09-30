@@ -3,7 +3,7 @@ local keymap = vim.keymap
 
 vim.g.mapleader = ' '
 vim.opt.tabstop = 2;
-vim.opt.shiftwidth = 2;
+vim.opt.shiftwidth = 4;
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -25,3 +25,16 @@ keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move to left window' })
 keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move to right window' })
 keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move to bottom window' })
 keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move to top window' })
+
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank({
+			-- Highlight group to use. 'IncSearch' or 'Visual' are common choices.
+			higroup = "IncSearch",
+			-- Duration in milliseconds (e.g., 200ms)
+			timeout = 200,
+		})
+	end,
+})

@@ -8,10 +8,12 @@ window-width = 3000
 window-height = 3000
 macos-titlebar-style = hidden
 macos-option-as-alt = true
-macos-icon = custom-style
+macos-icon = glass
 macos-icon-frame = chrome
 mouse-hide-while-typing = true
 window-save-state = always
+background-opacity=0.95
+
 
 palette = 0=#252530
 palette = 1=#d8647e

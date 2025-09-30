@@ -10,6 +10,7 @@ return {
 			},
 			formatters_by_ft = {
 				go = { "gofumpt" },
+				typescriptreact = { "prettierd" }
 			}
 		})
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
