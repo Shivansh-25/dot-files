@@ -19,20 +19,25 @@ return {
 
 		config = function()
 			local capabilities = require('blink.cmp').get_lsp_capabilities()
+
 			require("mason-lspconfig").setup({
 				handlers = {
 					function(server_name)
-						require("lspconfig")[server_name].setup({
-							capabilities = capabilities,
+						-- Inside the handler function
+						vim.lsp.config({
+							capabilities = capabilities
 						})
+						vim.lsp.enable(server_name)
 					end
 				}
 			})
 			-- This ensures that diagnostics are shown as virtual text
 			vim.diagnostic.config({
-				virtual_text = {
-					enable = true,
-				},
+				virtual_lines = true,
+				-- virtual_text = {
+				-- 	-- 	current_line = true,
+				-- 	enable = true,
+				-- },
 				signs = true,
 				update_in_insert = false, -- Don't show diagnostics while typing in insert mode
 				severity_sort = true, -- Show most severe diagnostics first
