@@ -8,6 +8,7 @@ return {
 	opts = {
 		-- lsp_keymaps = false,
 		-- other options
+		diagnostic = false,
 	},
 	config = function(lp, opts)
 		require("go").setup(opts)

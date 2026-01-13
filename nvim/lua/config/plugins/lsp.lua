@@ -38,10 +38,14 @@ return {
 				-- 	-- 	current_line = true,
 				-- 	enable = true,
 				-- },
+				virtual_text = false,
 				signs = true,
 				update_in_insert = false, -- Don't show diagnostics while typing in insert mode
 				severity_sort = true, -- Show most severe diagnostics first
 			})
+
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+			vim.keymap.set("n", "ca", vim.lsp.buf.code_action, { desc = "Go to definition" })
 		end
 	},
 }
