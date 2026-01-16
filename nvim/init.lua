@@ -8,6 +8,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.o.winborder = 'rounded'
 
+
 vim.opt.clipboard = "unnamedplus"
 keymap.set("n", "<C-s>", ":wqa<CR>", { silent = true })
 keymap.set("n", "<C-a>", "ggVG")
