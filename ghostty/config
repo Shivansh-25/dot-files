@@ -1,18 +1,20 @@
 #theme=kanagawabones
-font-family="IosevkaTerm Nerd Font Mono"
-#font-family="JetBrains Mono"
-font-size = 18
+#font-family="IosevkaTerm Nerd Font Mono"
+font-family="0xProto Nerd Font Mono"
+# font-family="JetBrainsMono Nerd Font Mono"
+# font-family="BlexMono Nerd Font Mono"
+# font-family="Inconsolata Nerd Font Mono"
+# font-family="Hack Nerd Font Mono"
+# font-family="FiraCode Nerd Font Mono"
+font-size = 16
 macos-non-native-fullscreen = visible-menu
 title = "ghostty"
-window-width = 3000
-window-height = 3000
 macos-titlebar-style = hidden
 macos-option-as-alt = true
-macos-icon = glass
-macos-icon-frame = chrome
+macos-icon = xray
+macos-icon-frame = plastic
 mouse-hide-while-typing = true
-window-save-state = always
-background-opacity=0.95
+background-opacity=0.92
 
 
 palette = 0=#252530
@@ -38,3 +40,5 @@ cursor-color = #cdcdcd
 selection-background = #252530
 selection-foreground = #cdcdcd
 
+keybind = ctrl+tab=unbind
+keybind = ctrl+shift+tab=unbind
