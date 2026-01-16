@@ -16,6 +16,7 @@ keymap.set("n", "<leader>q", ":q<CR>")
 keymap.set("n", "<leader>w", ":wa<CR>")
 keymap.set("n", "H", ":tabp<CR>")
 keymap.set("n", "L", ":tabn<CR>")
+keymap.set("n", "<Esc>", ":nohlsearch<CR>", { noremap = true, silent = true })
 
 -- minor fixes
 keymap.set("n", "<c-u>", "<c-u>zz")

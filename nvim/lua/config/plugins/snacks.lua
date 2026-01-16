@@ -43,5 +43,6 @@ return
 		{ "<leader>fs",      function() Snacks.picker.grep() end,    desc = "Grep" },
 		{ "<leader>/",       function() Snacks.picker.lines() end,   desc = "Buffer Lines" },
 		{ "<leader>,",       function() Snacks.picker.buffers() end, desc = "Buffers" },
+		{ "<leader>sh",      function() Snacks.picker.help() end,    desc = "Help Pages" },
 	},
 }
