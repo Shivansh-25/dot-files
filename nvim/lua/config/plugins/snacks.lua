@@ -12,6 +12,17 @@ return
 		scope = { enabled = true },
 		scroll = { enabled = true },
 		words = { enabled = true },
+		bufdelete = { enabled = true },
+		dashboard = {
+			enabled = true,
+			sections = {
+				{ section = "header" },
+				{ icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+				{ icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+				{ icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+				{ section = "startup" },
+			},
+		},
 		picker = {
 			enabled = true,
 			sources = {
@@ -44,5 +55,6 @@ return
 		{ "<leader>/",       function() Snacks.picker.lines() end,   desc = "Buffer Lines" },
 		{ "<leader>,",       function() Snacks.picker.buffers() end, desc = "Buffers" },
 		{ "<leader>sh",      function() Snacks.picker.help() end,    desc = "Help Pages" },
+		{ "<leader>q",       function() Snacks.bufdelete() end,      desc = "Buffer Delete" },
 	},
 }

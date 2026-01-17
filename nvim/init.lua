@@ -12,7 +12,7 @@ vim.o.winborder = 'rounded'
 vim.opt.clipboard = "unnamedplus"
 keymap.set("n", "<C-s>", ":wqa<CR>", { silent = true })
 keymap.set("n", "<C-a>", "ggVG")
-keymap.set("n", "<leader>q", ":q<CR>")
+-- keymap.set("n", "<leader>q", ":q<CR>")
 keymap.set("n", "<leader>w", ":wa<CR>")
 keymap.set("n", "H", ":tabp<CR>")
 keymap.set("n", "L", ":tabn<CR>")
@@ -24,9 +24,11 @@ keymap.set("n", "<c-d>", "<c-d>zz")
 keymap.set("n", "n", "nzz", { noremap = true })
 keymap.set("n", "<s-n>", "nzz", { noremap = true })
 
-vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
-vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
+keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
+keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
 
+keymap.set('n', 'H', '<cmd>bprevious<cr>', { desc = 'Prev buffer' })
+keymap.set('n', 'L', '<cmd>bnext<cr>', { desc = 'Next buffer' })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
