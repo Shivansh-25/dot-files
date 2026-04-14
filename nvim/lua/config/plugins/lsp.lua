@@ -45,7 +45,26 @@ return {
 			})
 
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-			vim.keymap.set("n", "ca", vim.lsp.buf.code_action, { desc = "Go to definition" })
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
+			vim.keymap.set("n", "ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
+
+			-- inlay hints
+			vim.lsp.inlay_hint.enable(false)
+			vim.keymap.set("n", "<leader>ih", function()
+				vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+			end, { desc = "Toggle inlay hints" })
+
+			-- lsp keymaps (info and restart)
+			vim.keymap.set("n", "<leader>li", function()
+				print("Attached LSP clients:")
+				for _, client in ipairs(vim.lsp.get_clients({ bufnr = 0 })) do
+					print("  - " .. client.name .. " (id: " .. client.id .. ")")
+				end
+			end, { desc = "Show LSP info" })
+			vim.keymap.set("n", "<leader>lr", function()
+				vim.cmd("LspRestart")
+				print("LSP restarted")
+			end, { desc = "Restart LSP" })
 		end
 	},
 }

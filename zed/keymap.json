@@ -12,7 +12,6 @@
       "cmd-shift-r": "projects::OpenRecent",
       "ctrl-j": "menu::SelectNext",
       "ctrl-k": "menu::SelectPrevious",
-      "ctrl-p": "command_palette::Toggle",
       "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-shift-t": "workspace::NewCenterTerminal"
     }
@@ -107,6 +106,30 @@
     "bindings": {
       "ctrl-shift-tab": "pane::ActivatePreviousItem",
       "ctrl-tab": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "AgentPanel && vim_mode == normal",
+    "bindings": {
+      "space c c": "editor::ToggleFocus"
+    }
+  },
+  {
+    "context": "(Editor && edit_prediction)",
+    "bindings": {
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "ctrl-y": "picker::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "(Editor && showing_completions)",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion"
     }
   }
 ]

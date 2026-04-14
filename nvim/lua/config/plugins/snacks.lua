@@ -10,7 +10,7 @@ return
 		input = { enabled = true },
 		indent = { enabled = true, char = '|' },
 		scope = { enabled = true },
-		scroll = { enabled = true },
+		scroll = { enabled = false },
 		words = { enabled = true },
 		bufdelete = { enabled = true },
 		dashboard = {
@@ -25,6 +25,7 @@ return
 		},
 		picker = {
 			enabled = true,
+			auto_pick = false,
 			sources = {
 				explorer = {
 					layout = {
@@ -37,8 +38,7 @@ return
 		},
 	},
 	keys = {
-		-- Toggle the explorer
-		{ "<leader>ee",      function() Snacks.explorer() end,       desc = "Explorer" },
+		{ "<leader>ee",      function() Snacks.explorer() end,              desc = "Explorer" },
 		{
 			"<leader>ef",
 			function()
@@ -49,12 +49,12 @@ return
 			end,
 			desc = "Reveal File"
 		},
-		{ "<leader><space>", function() Snacks.picker.smart() end,   desc = "Smart Find Files" },
-		{ "<leader>ff",      function() Snacks.picker.files() end,   desc = "Find Files" },
-		{ "<leader>fs",      function() Snacks.picker.grep() end,    desc = "Grep" },
-		{ "<leader>/",       function() Snacks.picker.lines() end,   desc = "Buffer Lines" },
-		{ "<leader>,",       function() Snacks.picker.buffers() end, desc = "Buffers" },
-		{ "<leader>sh",      function() Snacks.picker.help() end,    desc = "Help Pages" },
-		{ "<leader>q",       function() Snacks.bufdelete() end,      desc = "Buffer Delete" },
+		{ "<leader><space>", function() Snacks.picker.smart() end,          desc = "Smart Find Files" },
+		{ "<leader>/",       function() Snacks.picker.lines() end,          desc = "Buffer Lines" },
+		{ "<leader>,",       function() Snacks.picker.buffers() end,        desc = "Buffers" },
+		{ "<leader>sh",      function() Snacks.picker.help() end,           desc = "Help Pages" },
+		{ "<leader>gr",      function() Snacks.picker.lsp_references() end, nowait = true,                desc = "References" },
+		{ "<leader>q",       function() Snacks.bufdelete() end,             desc = "Buffer Delete" },
+		{ "<leader>Q",       function() Snacks.bufdelete.other() end,       desc = "Delete Other Buffers" },
 	},
 }
