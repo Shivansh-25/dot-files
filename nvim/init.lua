@@ -81,3 +81,12 @@ local function insert_timestamp()
 end
 
 vim.keymap.set("n", "<leader>it", insert_timestamp, { desc = "Insert 24h timestamp and separator" })
+
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = { 'go' },
+	callback = function()
+		pcall(vim.treesitter.start) -- Enable highlighting
+		vim.wo.foldmethod = 'expr'
+		vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+	end,
+})

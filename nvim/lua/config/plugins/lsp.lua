@@ -23,7 +23,6 @@ return {
 			require("mason-lspconfig").setup({
 				handlers = {
 					function(server_name)
-						-- Inside the handler function
 						vim.lsp.config({
 							capabilities = capabilities
 						})
@@ -33,12 +32,12 @@ return {
 			})
 			-- This ensures that diagnostics are shown as virtual text
 			vim.diagnostic.config({
-				virtual_lines = true,
+				virtual_lines = false,
 				-- virtual_text = {
 				-- 	-- 	current_line = true,
 				-- 	enable = true,
 				-- },
-				virtual_text = false,
+				virtual_text = true,
 				signs = true,
 				update_in_insert = false, -- Don't show diagnostics while typing in insert mode
 				severity_sort = true, -- Show most severe diagnostics first
@@ -62,7 +61,7 @@ return {
 				end
 			end, { desc = "Show LSP info" })
 			vim.keymap.set("n", "<leader>lr", function()
-				vim.cmd("LspRestart")
+				vim.cmd("lsp restart")
 				print("LSP restarted")
 			end, { desc = "Restart LSP" })
 		end

@@ -14,7 +14,7 @@ return
 		words = { enabled = true },
 		bufdelete = { enabled = true },
 		dashboard = {
-			enabled = true,
+			enabled = false,
 			sections = {
 				{ section = "header" },
 				{ icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
@@ -38,7 +38,7 @@ return
 		},
 	},
 	keys = {
-		{ "<leader>ee",      function() Snacks.explorer() end,              desc = "Explorer" },
+		{ "<leader>ee",      function() Snacks.explorer() end,                  desc = "Explorer" },
 		{
 			"<leader>ef",
 			function()
@@ -49,12 +49,12 @@ return
 			end,
 			desc = "Reveal File"
 		},
-		{ "<leader><space>", function() Snacks.picker.smart() end,          desc = "Smart Find Files" },
-		{ "<leader>/",       function() Snacks.picker.lines() end,          desc = "Buffer Lines" },
-		{ "<leader>,",       function() Snacks.picker.buffers() end,        desc = "Buffers" },
-		{ "<leader>sh",      function() Snacks.picker.help() end,           desc = "Help Pages" },
-		{ "<leader>gr",      function() Snacks.picker.lsp_references() end, nowait = true,                desc = "References" },
-		{ "<leader>q",       function() Snacks.bufdelete() end,             desc = "Buffer Delete" },
-		{ "<leader>Q",       function() Snacks.bufdelete.other() end,       desc = "Delete Other Buffers" },
+		{ "<leader><space>", function() Snacks.picker.smart() end,              desc = "Smart Find Files" },
+		{ "<leader>/",       function() Snacks.picker.lines() end,              desc = "Buffer Lines" },
+		{ "<leader>,",       function() Snacks.picker.buffers() end,            desc = "Buffers" },
+		{ "<leader>sh",      function() Snacks.picker.help() end,               desc = "Help Pages" },
+		{ "<leader>sD",      function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
+		{ "<leader>q",       function() Snacks.bufdelete() end,                 desc = "Buffer Delete" },
+		{ "<leader>Q",       function() Snacks.bufdelete.other() end,           desc = "Delete Other Buffers" },
 	},
 }

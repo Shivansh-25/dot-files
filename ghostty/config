@@ -1,9 +1,9 @@
 #theme=kanagawabones
 # font-family="IosevkaTerm Nerd Font Mono"
-font-family="0xProto Nerd Font Mono"
+# font-family="0xProto Nerd Font Mono"
+# font-family="Google Sans Code"
 # font-family="JetBrainsMono Nerd Font Mono"
-# font-family="BlexMono Nerd Font Mono"
-# font-family="Inconsolata Nerd Font Mono"
+font-family="Inconsolata Nerd Font Mono"
 # font-family="Hack Nerd Font Mono"
 # font-family="FiraCode Nerd Font Mono"
 font-size = 16

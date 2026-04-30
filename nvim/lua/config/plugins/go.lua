@@ -3,7 +3,6 @@ return {
 	dependencies = { -- optional packages
 		"ray-x/guihua.lua",
 		"neovim/nvim-lspconfig",
-		"nvim-treesitter/nvim-treesitter",
 	},
 	opts = {
 		-- lsp_keymaps = false,
@@ -11,6 +10,8 @@ return {
 		diagnostic = false,
 	},
 	config = function(lp, opts)
+		local util = require('go.utils')
+		util.loaded['nvim-treesitter'] = true
 		require("go").setup(opts)
 		local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
 		vim.api.nvim_create_autocmd("BufWritePre", {
